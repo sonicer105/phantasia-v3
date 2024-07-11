@@ -1,0 +1,21 @@
+{
+  "name": "phantasia-v3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "LinuxPony <sonic.ert@gmail.com>",
+  "license": "GPLv3",
+  "description": "",
+  "dependencies": {
+    "@discordjs/rest": "^2.3.0",
+    "discord-api-types": "^0.37.92",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.5.0",
+    "mongoose-sequence": "^6.0.1"
+  },
+  "private": true
+}
