@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
-mongoose.connect('mongodb://localhost:27017/discord-bot');
+mongoose.connect(process.env.MONGODB_URI);
 
 client.once('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);

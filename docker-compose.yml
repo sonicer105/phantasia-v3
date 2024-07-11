@@ -1,0 +1,24 @@
+services:
+  bot:
+    build: .
+    image: phantasia-v3:latest
+    restart: always
+    environment:
+      - CLIENT_ID=your_client_id_here
+      - GUILD_ID=your_guild_id_here
+      - DISCORD_TOKEN=your_discord_token_here
+      - MONGODB_URI=mongodb://mongo:27017/discord-bot # don't change this.
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
